@@ -1,17 +1,16 @@
 # colorMixer.py
 # Ryan Carroll
 # CIS 115 NLE01
-# Proves I know how to do this homework, with colors
-#adding this
+# Determines color based on CMYK. Print's results to Turtle.
 
-import turtle as t
+import turtle as t # Import turtle module
+
+color1 = input("Enter the first color\n Magenta, Yellow or Cyan: ")   # Defines variables
+color2 = input("Enter the second color\n Magenta, Yellow or Cyan: ")  #
 wn = t.Screen()
 
-color1 = input("Enter the first color\n Magenta, Yellow or Cyan: ")
-color2 = input("Enter the second color\n Magenta, Yellow or Cyan: ")
-
 if (color1.lower() == "magenta" and color2.lower() == "cyan") \
-        or (color1.lower() == "cyan" and color2.lower() == "magenta"):
+        or (color1.lower() == "cyan" and color2.lower() == "magenta"):   #uses .lower
     t.bgcolor('purple')
     wn.addshape('turtle.gif')
     t.shape('turtle.gif')
@@ -31,7 +30,7 @@ elif (color1.lower() == "cyan" and color2.lower() == "yellow") \
     t.shape('turtle.gif')
     wn.mainloop()
 
-elif color1.lower().lower() == color2.lower().lower():
+elif color1.lower() == color2.lower():
     t.bgcolor(f"{color2}")
     wn.addshape('turtle.gif')
     t.shape('turtle.gif')
@@ -39,6 +38,7 @@ elif color1.lower().lower() == color2.lower().lower():
 
 else:
     t.write("ERROR", move=False, align="left", font=("Arial", 30, "normal"))
+    wn.mainloop()
 
 
 
